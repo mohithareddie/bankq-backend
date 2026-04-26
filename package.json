@@ -1,0 +1,23 @@
+{
+  "name": "bankq-backend",
+  "version": "1.0.0",
+  "description": "BankQ Authentication Backend — Express + MySQL + JWT",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.6",
+    "axios": "^1.15.1",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "firebase-admin": "^13.8.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.0",
+    "nodemailer": "^8.0.5",
+    "twilio": "^6.0.0"
+  }
+}
