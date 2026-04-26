@@ -7,7 +7,7 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const axios = require('axios');
-//const { initializeDatabase, getDB } = require('./config/db');
+const { initializeDatabase, getDB } = require('./config/db');
 //const authRoutes = require('./routes/authRoutes');
 
 //const admin = require("firebase-admin");
@@ -401,13 +401,13 @@ app.get('/', (req, res) => {
 // ---- START SERVER ----
 async function startServer() {
   // Auto-create database + all tables (users, otp_tokens, sessions)
-  //await initializeDatabase();
+  await initializeDatabase();
 
   // Queue notifications are handled by the frontend QueueSimulator
   // which calls POST /api/queue/notify when a user's turn is approaching.
   // No server-side polling needed since queue state lives on the client.
   console.log('📡 Queue notifications: triggered by frontend via /api/queue/notify');
-
+const PORT = process.env.PORT || 5000;
   app.listen(5000, '0.0.0.0', () => {
     console.log("Server running on all networks at http://192.168.1.5:5000");
     console.log('');
