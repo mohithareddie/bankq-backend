@@ -401,7 +401,7 @@ app.get('/', (req, res) => {
 // ---- START SERVER ----
 async function startServer() {
   // Auto-create database + all tables (users, otp_tokens, sessions)
-  await initializeDatabase();
+  //await initializeDatabase();
 
   // Queue notifications are handled by the frontend QueueSimulator
   // which calls POST /api/queue/notify when a user's turn is approaching.
