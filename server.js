@@ -10,18 +10,18 @@ const axios = require('axios');
 //const { initializeDatabase, getDB } = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 
-const admin = require("firebase-admin");
-let firebaseReady = false;
-try {
+//const admin = require("firebase-admin");
+//let firebaseReady = false;
+//try {
   //const serviceAccount = require("./config/serviceAccountKey.json");
-  admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount)
-  });
-  firebaseReady = true;
-  console.log('🔥 Firebase Admin initialized');
-} catch (err) {
-  console.log('🔥 Firebase Admin init skipped:', err.message);
-}
+  //admin.initializeApp({
+    //credential: admin.credential.cert(serviceAccount)
+  //});
+  //firebaseReady = true;
+  //console.log('🔥 Firebase Admin initialized');
+//} catch (err) {
+  //console.log('🔥 Firebase Admin init skipped:', err.message);
+//}
 
 // Load environment variables (must be before Twilio init)
 dotenv.config();
