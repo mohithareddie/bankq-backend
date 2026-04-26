@@ -8,7 +8,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const axios = require('axios');
 //const { initializeDatabase, getDB } = require('./config/db');
-const authRoutes = require('./routes/authRoutes');
+//const authRoutes = require('./routes/authRoutes');
 
 //const admin = require("firebase-admin");
 //let firebaseReady = false;
@@ -100,7 +100,7 @@ app.use((req, res, next) => {
 });
 
 // ---- ROUTES ----
-app.use('/api/auth', authRoutes);
+//app.use('/api/auth', authRoutes);
 app.post("/api/save-token", (req, res) => {
   const { token, userId } = req.body;
 
